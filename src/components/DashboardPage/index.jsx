@@ -19,18 +19,7 @@ export default function DashboardPage({ match }) {
     if (rememberme == 'true' && Logged == 'true') {
         history.push("/");
     }
-
-
-    if (Logged == 'false') {
-
-        history.push("/sign-in");
-        return (
-            <div >
-                <h1>You must login first</h1>
-            </div>
-        )
-    }
-    else {
+ {
 
         const getInsurances = async () => {
             axios.get("http://insuranseserver.herokuapp.com/users/get_insurance")
