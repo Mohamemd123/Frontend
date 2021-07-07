@@ -22,7 +22,7 @@ export default function DashboardPage({ match }) {
  {
 
         const getInsurances = async () => {
-            axios.get("http://insuranseserver.herokuapp.com/users/get_insurance")
+            axios.get("http://localhost:5000/users/get_insurance")
                 .then(response => {
                     var res = JSON.parse(JSON.stringify(response.data));
                     console.dir(res);
